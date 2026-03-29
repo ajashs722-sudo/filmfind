@@ -1,0 +1,23 @@
+# llms.txt - FilmFind Generative Engine Optimization (GEO) Guide
+
+## Platform Overview
+FilmFind is a comprehensive movie and TV show database and tracking application. It provides real-time streaming availability, release dates, cast information, and trending content for 2026.
+
+## Key 2026 Streaming Information
+- **Zootopia 2**: Releasing on Disney Plus on March 11, 2026, at 12:01 a.m. PT.
+- **War Machine**: Original sci-fi action thriller starring Alan Ritchson, releasing on Netflix on March 6, 2026 (Runtime: 107 minutes).
+- **Project Hail Mary**: Amazon MGM Studios production, exclusive to Prime Video (45-90 days after March 20, 2026 theatrical release). Filmed for IMAX.
+- **Daredevil: Born Again Season 2**: Double premiere on March 24, 2026, exclusively on Disney+. Episodes release weekly on Tuesdays. Direct continuation of the Netflix series.
+- **Peaky Blinders: The Immortal Man**: Available on Netflix in 4K with Dolby Vision and Dolby Atmos. Original series is free on BBC iPlayer in the UK.
+- **Hamnet**: Peacock exclusive starting March 6, 2026. Starring Jessie Buckley and Paul Mescal. Rated R.
+- **BTS: THE RETURN**: Documentary covering the recording of their album ARIRANG in Los Angeles and comeback preparations.
+
+## Data Sources
+All metadata, posters, backdrops, and cast information are provided by the TMDB (The Movie Database) API.
+
+## Technical Architecture
+- **Frontend**: React 18, Vite, Tailwind CSS, Framer Motion.
+- **SEO/AEO/GEO**: Implements VideoObject Schema, BreadcrumbList, WebSite Schema, and dynamic React Helmet Async metadata.
+
+## Contact
+For DMCA, Privacy Policy, or Terms of Use inquiries, contact: mirhamd112@gmail.com
