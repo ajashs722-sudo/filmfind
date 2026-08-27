@@ -324,15 +324,12 @@ export default function Player() {
             })}
           </div>
           
-          <button className="p-3 hover:bg-surface-variant/50 rounded-full transition-all active:scale-90 text-on-surface-variant">
-            <Settings size={22} />
-          </button>
         </div>
       </header>
 
       {/* Main Player Area */}
-      <main className="flex-1 bg-black relative flex flex-col">
-        <div className="relative flex-1 overflow-hidden">
+      <main className="flex-1 bg-black relative flex flex-col overflow-y-auto">
+        <div className="relative w-full aspect-video md:aspect-auto md:flex-1 min-h-[240px] md:min-h-0 overflow-hidden shrink-0">
           <AnimatePresence mode="wait">
             {isIframeLoading && !showErrorOverlay && (
               <motion.div 

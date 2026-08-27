@@ -13,6 +13,7 @@ import { Button } from '@/src/components/ui/Button';
 import { Badge } from '@/src/components/ui/Badge';
 import MediaModal from '@/src/components/MediaModal';
 import ShareModal from '@/src/components/ShareModal';
+import TelegramRequestBox from '@/src/components/TelegramRequestBox';
 
 export default function MovieDetails() {
   const { id } = useParams<{ id: string }>();
@@ -242,6 +243,9 @@ export default function MovieDetails() {
               <p className="mt-4 italic text-primary font-medium">"{movie.tagline}"</p>
             )}
           </section>
+
+          {/* Telegram Request & Community Box */}
+          <TelegramRequestBox title={movie.title || ''} type="movie" />
 
           {/* Videos/Trailers */}
           {movie.videos?.results?.length > 0 && (

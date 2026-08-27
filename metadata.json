@@ -1,5 +1,8 @@
 {
   "name": "Remix: CineStream MD3",
   "description": "A premium movie and TV show streaming platform built with Material Design 3 and TMDB API.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

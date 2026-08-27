@@ -8,20 +8,20 @@ import { Movie } from '@/src/types';
 
 const faqs = [
   {
-    question: "What is ARXUN?",
-    answer: "ARXUN is a cinematic discovery platform designed for film enthusiasts. We provide a curated gallery of movies and TV shows, allowing you to discover your next favorite story without the clutter of traditional streaming databases."
+    question: "What is Aluvantis?",
+    answer: "Aluvantis is a cinematic discovery platform designed for film enthusiasts. We provide a curated gallery of movies and TV shows, allowing you to discover your next favorite story without the clutter of traditional streaming databases."
   },
   {
-    question: "How much does ARXUN cost?",
+    question: "How much does Aluvantis cost?",
     answer: "The platform is completely free to use. We believe in democratizing cinematic discovery for everyone."
   },
   {
     question: "Where can I watch?",
-    answer: "ARXUN helps you discover content and provides information on which streaming services currently offer the titles in your region."
+    answer: "Aluvantis helps you discover content and provides information on which streaming services currently offer the titles in your region."
   },
   {
     question: "How do I cancel?",
-    answer: "Since ARXUN is free to use with no commitment, there is no subscription to cancel. You can simply stop using the platform at any time."
+    answer: "Since Aluvantis is free to use with no commitment, there is no subscription to cancel. You can simply stop using the platform at any time."
   }
 ];
 
@@ -51,9 +51,9 @@ export default function Landing() {
   const displayMovies = trending.slice(1, 7);
 
   return (
-    <main className="min-h-screen flex flex-col relative overflow-hidden -mt-4 md:-mt-8 -mx-4 md:-mx-8 lg:-mx-10 bg-surface text-on-surface transition-colors duration-300">
+    <div className="min-h-screen flex flex-col relative overflow-hidden -mt-4 md:-mt-8 -mx-4 md:-mx-8 lg:-mx-10 bg-surface text-on-surface transition-colors duration-300">
       <SEO 
-        title="ARXUN - Watch Movies Online Free 2026 & Best Streaming Sites" 
+        title="Aluvantis - Watch Movies Online Free 2026 & Best Streaming Sites" 
         description="Discover, track, and explore the best movies and TV shows online. Your ultimate 2026 streaming guide for Netflix, Disney Plus, Prime Video, and more." 
         keywords={seoKeywords}
       />
@@ -160,7 +160,7 @@ export default function Landing() {
       <section className="py-20 md:py-24 px-6 md:px-12 bg-surface-variant/10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-display text-3xl md:text-4xl font-black mb-4 tracking-tight text-on-surface">Why Join ARXUN?</h2>
+            <h2 className="font-display text-3xl md:text-4xl font-black mb-4 tracking-tight text-on-surface">Why Join Aluvantis?</h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
@@ -168,7 +168,7 @@ export default function Landing() {
               { icon: Film, title: "Unlimited Access", desc: "Access to thousands of films and series across all genres and languages without any restrictions." },
               { icon: MonitorPlay, title: "Seamless Streaming", desc: "Watch on your TV, laptop, phone, or tablet. Our platform adapts to any screen size perfectly." },
               { icon: Download, title: "Offline Downloads", desc: "Take your stories with you. Save titles for offline viewing on the go, anywhere in the world." },
-              { icon: CalendarCheck, title: "Flexible Plans", desc: "Experience ultimate freedom with no commitments. ARXUN is free to use for cinematic lovers." }
+              { icon: CalendarCheck, title: "Flexible Plans", desc: "Experience ultimate freedom with no commitments. Aluvantis is free to use for cinematic lovers." }
             ].map((feature, i) => (
               <motion.div 
                 key={i} 
@@ -225,6 +225,6 @@ export default function Landing() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

@@ -22,6 +22,7 @@ const DMCA = lazy(() => import('./pages/DMCA'));
 const ContactUs = lazy(() => import('./pages/ContactUs'));
 const Docs = lazy(() => import('./pages/Docs'));
 const Landing = lazy(() => import('./pages/Landing'));
+const Watchlist = lazy(() => import('./pages/Watchlist'));
 
 export default function App() {
   return (
@@ -40,6 +41,7 @@ export default function App() {
             <Route path="/tv" element={<TvShows />} />
             <Route path="/upcoming" element={<Upcoming />} />
             <Route path="/search" element={<Search />} />
+            <Route path="/watchlist" element={<Watchlist />} />
             <Route path="/cast-search" element={<CastSearch />} />
             <Route path="/movie/:id" element={<MovieDetails />} />
             <Route path="/tv/:id" element={<TvShowDetails />} />

@@ -1,83 +1,139 @@
 import React from 'react';
-import { Instagram, PlayCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { PlayCircle, Instagram, Send, Bot, ShieldCheck } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export default function Footer() {
   return (
-    <footer className="bg-surface border-t border-outline-variant py-16 px-4 md:px-8">
-      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-12">
-        <div className="col-span-2 lg:col-span-2">
-          <Link to="/" className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 bg-primary rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20">
-              <PlayCircle className="text-on-primary" size={24} />
+    <motion.footer 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="mt-12 pt-8 pb-6 bg-surface-variant/30 border-t border-outline/20 rounded-t-[28px] md:rounded-t-[36px] shadow-xl relative overflow-hidden backdrop-blur-md"
+    >
+      {/* Background Accent Blur */}
+      <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[350px] h-[150px] bg-primary/10 blur-[80px] rounded-full pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Compact Community Banner Row */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 mb-8 rounded-2xl bg-surface/50 border border-outline/15 shadow-sm">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-xl bg-primary flex items-center justify-center shadow-md">
+              <PlayCircle className="text-on-primary" size={18} />
             </div>
-            <div className="flex flex-col justify-center">
-              <span className="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold leading-none mb-0.5">Arxun</span>
-              <h2 className="text-2xl font-display font-black tracking-tight text-primary leading-none">
-                FilmFind
-              </h2>
+            <div>
+              <span className="text-[9px] uppercase tracking-widest text-on-surface-variant font-bold leading-none block">Aluvantis Community</span>
+              <span className="text-sm font-bold text-on-surface">Connect with us on Telegram & Instagram</span>
             </div>
-          </Link>
-          <p className="text-on-surface-variant text-sm max-w-xs leading-relaxed">
-            Your ultimate destination for discovering movies and TV shows. 
-            Stay updated with the latest news, reviews, and trending content.
-          </p>
-          <div className="flex gap-4 mt-8 text-on-surface-variant">
-            <a href="https://x.com/arxunFilmfind" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-surface-variant/30 flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all duration-300">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 24.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-              </svg>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2 text-xs">
+            <a 
+              href="https://t.me/Aluvantis" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-primary/15 text-primary hover:bg-primary hover:text-on-primary font-bold transition-all"
+            >
+              <Send size={13} />
+              <span>@Aluvantis</span>
             </a>
-            <a href="https://instagram.com/arxunstudio" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-surface-variant/30 flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all duration-300">
-              <Instagram size={20} />
+
+            <a 
+              href="https://t.me/Aluvantis_bot" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-secondary/15 text-secondary hover:bg-secondary hover:text-on-secondary font-bold transition-all"
+            >
+              <Bot size={13} />
+              <span>@Aluvantis_bot</span>
+            </a>
+
+            <a 
+              href="https://t.me/Aluvantis_admin" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-tertiary/15 text-tertiary hover:bg-tertiary hover:text-on-tertiary font-bold transition-all"
+            >
+              <ShieldCheck size={13} />
+              <span>@Aluvantis_admin</span>
+            </a>
+
+            <a 
+              href="https://www.instagram.com/aluvantis?igsh=MWI5Z2N3bjdjYnNwYw==" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface/80 border border-outline/20 text-on-surface hover:border-primary font-bold transition-all"
+            >
+              <Instagram size={13} className="text-tertiary" />
+              <span>Instagram</span>
             </a>
           </div>
         </div>
-        
-        <div>
-          <h3 className="font-display font-black text-on-surface mb-6 uppercase tracking-wider text-sm">Navigation</h3>
-          <ul className="space-y-3 text-sm text-on-surface-variant">
-            <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
-            <li><Link to="/movies" className="hover:text-primary transition-colors">Movies</Link></li>
-            <li><Link to="/tv" className="hover:text-primary transition-colors">TV Shows</Link></li>
-            <li><Link to="/upcoming" className="hover:text-primary transition-colors">Coming Soon</Link></li>
-            <li><Link to="/blog" className="hover:text-primary transition-colors font-bold text-primary">Blog</Link></li>
-          </ul>
+
+        {/* Main Links Row */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6 text-xs text-on-surface-variant">
+          
+          {/* Brand Info */}
+          <div className="col-span-2 md:col-span-1">
+            <Link to="/" className="inline-flex items-center gap-2 mb-2">
+              <span className="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Aluvantis</span>
+              <span className="text-base font-display font-black text-primary">FilmFind</span>
+            </Link>
+            <p className="text-on-surface-variant/80 leading-relaxed text-[13px]">
+              Cinematic discovery hub for trending movies and TV series.
+            </p>
+          </div>
+
+          {/* Quick Nav */}
+          <div>
+            <span className="font-bold text-on-surface text-xs uppercase tracking-wider block mb-2.5">Navigation</span>
+            <ul className="space-y-1.5">
+              <li><Link to="/home" className="hover:text-primary transition-colors">Home</Link></li>
+              <li><Link to="/movies" className="hover:text-primary transition-colors">Movies</Link></li>
+              <li><Link to="/tv" className="hover:text-primary transition-colors">TV Shows</Link></li>
+              <li><Link to="/upcoming" className="hover:text-primary transition-colors">Upcoming</Link></li>
+            </ul>
+          </div>
+
+          {/* Collections */}
+          <div>
+            <span className="font-bold text-on-surface text-xs uppercase tracking-wider block mb-2.5">Collections</span>
+            <ul className="space-y-1.5">
+              <li><Link to="/collections/trending" className="hover:text-primary transition-colors">Trending Now</Link></li>
+              <li><Link to="/collections/popular" className="hover:text-primary transition-colors">Popular</Link></li>
+              <li><Link to="/collections/top-rated" className="hover:text-primary transition-colors">Top Rated</Link></li>
+              <li><Link to="/collections/marvel" className="hover:text-primary transition-colors">Marvel</Link></li>
+            </ul>
+          </div>
+
+          {/* Legal & Contacts */}
+          <div>
+            <span className="font-bold text-on-surface text-xs uppercase tracking-wider block mb-2.5">Support & Legal</span>
+            <ul className="space-y-1.5">
+              <li><Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms-of-use" className="hover:text-primary transition-colors">Terms of Use</Link></li>
+              <li><Link to="/dmca" className="hover:text-primary transition-colors">DMCA Notice</Link></li>
+              <li><Link to="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
+            </ul>
+          </div>
+
         </div>
 
-        <div>
-          <h3 className="font-display font-black text-on-surface mb-6 uppercase tracking-wider text-sm">Collections</h3>
-          <ul className="space-y-3 text-sm text-on-surface-variant">
-            <li><Link to="/collections/trending" className="hover:text-primary transition-colors">Trending</Link></li>
-            <li><Link to="/collections/top-rated" className="hover:text-primary transition-colors">Top Rated</Link></li>
-            <li><Link to="/collections/popular" className="hover:text-primary transition-colors">Popular</Link></li>
-            <li><Link to="/cast-search" className="hover:text-primary transition-colors">Actors</Link></li>
-          </ul>
+        {/* Bottom Minimal Copyright Bar */}
+        <div className="pt-4 border-t border-outline/15 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-on-surface-variant/70">
+          <p>© {new Date().getFullYear()} Aluvantis FilmFind. All rights reserved.</p>
+          <div className="flex items-center gap-3 font-medium">
+            <a href="https://t.me/Aluvantis" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Telegram</a>
+            <span>•</span>
+            <a href="https://www.instagram.com/aluvantis?igsh=MWI5Z2N3bjdjYnNwYw==" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Instagram</a>
+            <span>•</span>
+            <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy</Link>
+          </div>
         </div>
 
-        <div>
-          <h3 className="font-display font-black text-on-surface mb-6 uppercase tracking-wider text-sm">Legal</h3>
-          <ul className="space-y-3 text-sm text-on-surface-variant">
-            <li><Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
-            <li><Link to="/terms-of-use" className="hover:text-primary transition-colors">Terms of Use</Link></li>
-            <li><Link to="/dmca" className="hover:text-primary transition-colors">DMCA</Link></li>
-            <li><Link to="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
-          </ul>
-        </div>
       </div>
-      
-      <div className="text-center pt-12 border-t border-outline-variant/30">
-        <div className="flex justify-center gap-6 mb-6 text-sm text-on-surface-variant">
-          <Link to="/welcome" className="hover:text-primary transition-colors">About Us</Link>
-          <Link to="/docs" className="hover:text-primary transition-colors">Documentation</Link>
-        </div>
-        <p className="text-on-surface-variant text-sm">
-          &copy; {new Date().getFullYear()} FilmFind. All rights reserved.
-        </p>
-        <p className="text-on-surface-variant/40 text-xs mt-3 flex items-center justify-center gap-1">
-          Data provided by <span className="font-bold text-primary">TMDB</span>.
-        </p>
-      </div>
-    </footer>
+    </motion.footer>
   );
 }

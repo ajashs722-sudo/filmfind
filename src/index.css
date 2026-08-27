@@ -3,40 +3,40 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  /* Dark Mode (Default) */
-  --color-primary: #FFB5A0;
-  --color-on-primary: #561F0F;
-  --color-primary-container: #723523;
-  --color-on-primary-container: #FFDBD1;
+  /* Dark Mode (Default) - Obsidian Black #14201F, Classic Linen #F6F3EC, Doe Brown #C6A15B, Brunswick Green #0E4F4F */
+  --color-primary: #C6A15B;
+  --color-on-primary: #14201F;
+  --color-primary-container: #0E4F4F;
+  --color-on-primary-container: #E0F2F1;
   
-  --color-secondary: #E7BDB2;
-  --color-on-secondary: #442A22;
-  --color-secondary-container: #5D4037;
-  --color-on-secondary-container: #FFDBD1;
+  --color-secondary: #2E7272;
+  --color-on-secondary: #F6F3EC;
+  --color-secondary-container: #1E3837;
+  --color-on-secondary-container: #D5EAE8;
   
-  --color-tertiary: #D8C58D;
-  --color-on-tertiary: #3B2F05;
-  --color-tertiary-container: #534619;
-  --color-on-tertiary-container: #F5E1A7;
+  --color-tertiary: #DFB773;
+  --color-on-tertiary: #14201F;
+  --color-tertiary-container: #4D3C1B;
+  --color-on-tertiary-container: #F8E8C8;
   
   --color-error: #FFB4AB;
   --color-on-error: #690005;
   --color-error-container: #93000A;
   --color-on-error-container: #FFDAD6;
   
-  --color-background: #1A110F;
-  --color-on-background: #F1DFDA;
+  --color-background: #14201F;
+  --color-on-background: #F6F3EC;
   
-  --color-surface: #1A110F;
-  --color-on-surface: #F1DFDA;
-  --color-surface-variant: #53433F;
-  --color-on-surface-variant: #D8C2BC;
+  --color-surface: #14201F;
+  --color-on-surface: #F6F3EC;
+  --color-surface-variant: #223332;
+  --color-on-surface-variant: #C2D4D3;
   
-  --color-outline: #A08C87;
-  --color-outline-variant: #53433F;
+  --color-outline: #3F5756;
+  --color-outline-variant: #253938;
 
-  --color-success: #B4F1B4;
-  --color-on-success: #00390A;
+  --color-success: #7AD89B;
+  --color-on-success: #003816;
 
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Epilogue", "Manrope", sans-serif;
@@ -56,36 +56,37 @@
 }
 
 .light {
-  --color-primary: #8F4C38;
-  --color-on-primary: #FFFFFF;
-  --color-primary-container: #FFDBD1;
-  --color-on-primary-container: #3A0B01;
+  /* Light Mode - Classic Linen #F6F3EC, Brunswick Green #0E4F4F, Doe Brown #C6A15B, Obsidian Black #14201F */
+  --color-primary: #0E4F4F;
+  --color-on-primary: #F6F3EC;
+  --color-primary-container: #D3E8E7;
+  --color-on-primary-container: #042525;
   
-  --color-secondary: #77574E;
+  --color-secondary: #8B6B2B;
   --color-on-secondary: #FFFFFF;
-  --color-secondary-container: #FFDBD1;
-  --color-on-secondary-container: #2C150F;
+  --color-secondary-container: #F6E6CA;
+  --color-on-secondary-container: #2F2104;
   
-  --color-tertiary: #6C5D2F;
-  --color-on-tertiary: #FFFFFF;
-  --color-tertiary-container: #F5E1A7;
-  --color-on-tertiary-container: #231B00;
+  --color-tertiary: #C6A15B;
+  --color-on-tertiary: #14201F;
+  --color-tertiary-container: #FBF4E4;
+  --color-on-tertiary-container: #3D2D0F;
   
   --color-error: #BA1A1A;
   --color-on-error: #FFFFFF;
   --color-error-container: #FFDAD6;
   --color-on-error-container: #410002;
   
-  --color-background: #FFF8F6;
-  --color-on-background: #231917;
+  --color-background: #F6F3EC;
+  --color-on-background: #14201F;
   
-  --color-surface: #FFF8F6;
-  --color-on-surface: #231917;
-  --color-surface-variant: #F5DED8;
-  --color-on-surface-variant: #53433F;
+  --color-surface: #F6F3EC;
+  --color-on-surface: #14201F;
+  --color-surface-variant: #E8E3D8;
+  --color-on-surface-variant: #3A4A49;
   
-  --color-outline: #85736E;
-  --color-outline-variant: #D8C2BC;
+  --color-outline: #738483;
+  --color-outline-variant: #CBC5B7;
 
   --color-success: #006D21;
   --color-on-success: #FFFFFF;

@@ -13,6 +13,7 @@ import { Button } from '@/src/components/ui/Button';
 import { Badge } from '@/src/components/ui/Badge';
 import MediaModal from '@/src/components/MediaModal';
 import ShareModal from '@/src/components/ShareModal';
+import TelegramRequestBox from '@/src/components/TelegramRequestBox';
 
 export default function TvShowDetails() {
   const { id } = useParams<{ id: string }>();
@@ -240,6 +241,9 @@ export default function TvShowDetails() {
               <p className="mt-4 italic text-primary font-medium">"{show.tagline}"</p>
             )}
           </section>
+
+          {/* Telegram Request Box */}
+          <TelegramRequestBox title={show.name || ''} type="tv" />
 
           {/* Videos/Trailers */}
           {show.videos?.results?.length > 0 && (
