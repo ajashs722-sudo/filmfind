@@ -1,15 +1,17 @@
 export interface Movie {
   id: number;
-  title: string;
+  title?: string;
   name?: string;
-  overview: string;
-  poster_path: string;
-  backdrop_path: string;
+  overview?: string;
+  poster_path?: string;
+  backdrop_path?: string;
+  profile_path?: string;
   release_date?: string;
   first_air_date?: string;
-  vote_average: number;
-  media_type?: 'movie' | 'tv';
-  genre_ids: number[];
+  vote_average?: number;
+  media_type?: 'movie' | 'tv' | 'person' | string;
+  genre_ids?: number[];
+  known_for_department?: string;
 }
 
 export interface Genre {

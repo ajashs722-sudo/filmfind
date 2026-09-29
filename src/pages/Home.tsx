@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo, useRef, useCallback } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Play, Info, Sparkles, TrendingUp, Star, History, Dices, ChevronRight, ChevronLeft, Film, Compass, Tv, Award } from 'lucide-react';
+import { Play, Info, Sparkles, TrendingUp, Star, History, ChevronRight, ChevronLeft, Film, Compass, Tv, Award } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import gsap from 'gsap';
 import { tmdbService, getImageUrl } from '@/src/services/tmdb';
@@ -11,7 +11,6 @@ import { Button } from '@/src/components/ui/Button';
 import { Badge } from '@/src/components/ui/Badge';
 import { cn, formatRating, formatYear } from '@/src/lib/utils';
 import SEO from '@/src/components/SEO';
-import WatchSpinnerModal from '@/src/components/WatchSpinnerModal';
 import ProviderFilter from '@/src/components/ProviderFilter';
 import MoodPicker from '@/src/components/MoodPicker';
 import { seoService } from '@/src/services/seoService';
@@ -34,7 +33,6 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [loadingStepIdx, setLoadingStepIdx] = useState(0);
   const [continueWatching, setContinueWatching] = useState<any[]>([]);
-  const [isSpinnerOpen, setIsSpinnerOpen] = useState(false);
   const [selectedProvider, setSelectedProvider] = useState('all');
 
   const heroTextRef = useRef<HTMLDivElement>(null);
@@ -242,28 +240,11 @@ export default function Home() {
                   <span>Explore Details</span>
                 </Button>
               </Link>
-
-              <Button
-                variant="outlined"
-                size="lg"
-                onClick={() => setIsSpinnerOpen(true)}
-                className="gap-2.5 backdrop-blur-2xl bg-surface/40 hover:bg-surface/70 border-outline/30 hover:border-primary text-on-surface text-sm font-bold active:scale-95 transition-all"
-              >
-                <Dices size={18} className="text-primary" />
-                <span>Decision Wheel 🎲</span>
-              </Button>
             </div>
           </div>
 
-
         </section>
       )}
-
-      {/* Watch Spinner Modal */}
-      <WatchSpinnerModal
-        isOpen={isSpinnerOpen}
-        onClose={() => setIsSpinnerOpen(false)}
-      />
 
       {/* Interactive MD3 Provider Filter Bar */}
       <section className="px-1">
